@@ -8,7 +8,7 @@ if (filter_input(INPUT_POST, 'reg_submit', FILTER_SANITIZE_URL) !== null) {
     $reg_hpno = filter_input(INPUT_POST, 'reg_hpno', FILTER_SANITIZE_STRING);
     $reg_pwd = filter_input(INPUT_POST, 'reg_pwd', FILTER_SANITIZE_STRING);
     $reg_cpwd = filter_input(INPUT_POST, 'reg_cpwd', FILTER_SANITIZE_STRING);
-
+    
     $sql_validate = "SELECT * FROM user WHERE User_Email ='$reg_email'";
     $result_validate = mysqli_query($link, $sql_validate);
 
@@ -21,6 +21,11 @@ if (filter_input(INPUT_POST, 'reg_submit', FILTER_SANITIZE_URL) !== null) {
             header('refresh:1;url=log_in.php');
         }
     } else {
+        $_SESSION['reg_fname'] = $reg_fname;
+        $_SESSION['reg_email'] = $reg_email;
+        $_SESSION['reg_hpno'] = $reg_hpno;
+        $_SESSION['reg_pwd'] = $reg_pwd;
+        $_SESSION['reg_cpwd'] = $reg_cpwd;
         echo '<div class="msg_box failed"><img src="../Asset/cross_icon.svg" width="25" alt="@"><p>Email already exist</p></div>';
     }
 }

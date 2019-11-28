@@ -36,7 +36,7 @@ include 'php/sign_up_query.php';
                                 <img src="../Asset/contact_name_icon.svg" alt="@" width="20">
                             </div>
                         </div>
-                        <input type="text" class="form-control" name="reg_fname" id="reg_fname" placeholder="Full Name">
+                        <input type="text" class="form-control" name="reg_fname" id="reg_fname" placeholder="Full Name" value="<?php if(isset($_SESSION['reg_fname'])){echo $_SESSION['reg_fname'];unset($_SESSION['reg_fname']);}?>">
                         <div class="error_msg" id="fname_empty"><p>Please fill in your name.</p></div>
                         <div class="error_msg" id="fname_maxlength"><p>Name is too long. Maximum 30 characters.</p></div>
                         <div class="error_msg" id="fname_isnum"><p>Name should not be an number or contain any number.</p></div>
@@ -49,7 +49,7 @@ include 'php/sign_up_query.php';
                                 <img src="../Asset/contact_email_icon.svg" alt="@" width="20">
                             </div>
                         </div>
-                        <input type="text" class="form-control" name="reg_email" id="reg_email" placeholder="Email">
+                        <input type="text" class="form-control" name="reg_email" id="reg_email" placeholder="Email" value="<?php if(isset($_SESSION['reg_email'])){echo $_SESSION['reg_email'];unset($_SESSION['reg_email']);}?>">
                         <div class="error_msg" id="email_empty"><p>Please fill in your email.</p></div>
                         <div class="error_msg" id="email_invalid"><p>Please fill in correct email format.</p></div>
                     </div>
@@ -60,7 +60,7 @@ include 'php/sign_up_query.php';
                                 <img src="../Asset/signup_phone_icon.svg" alt="@" width="20">
                             </div>
                         </div>
-                        <input type="text" class="form-control" name="reg_hpno" id="reg_hpno" placeholder="Phone Number (e.g. 01112345678)">
+                        <input type="text" class="form-control" name="reg_hpno" id="reg_hpno" placeholder="Phone Number (e.g. 01112345678)" value="<?php if(isset($_SESSION['reg_hpno'])){echo $_SESSION['reg_hpno'];unset($_SESSION['reg_hpno']);}?>">
                         <div class="error_msg" id="hpno_empty"><p>Please fill in your phone number.</p></div>
                         <div class="error_msg" id="hpno_isMax"><p>Phone number of Malaysia after prefix should be maximum of 8 digits.</p></div>
                         <div class="error_msg" id="hpno_isMin"><p>Phone number of Malaysia after prefix should be at least 7 digits.</p></div>
@@ -74,7 +74,7 @@ include 'php/sign_up_query.php';
                                 <img src="../Asset/login_psw_icon.svg" alt="@" width="20">
                             </div>
                         </div>
-                        <input type="password" class="form-control" name="reg_pwd" id="reg_pwd" placeholder="Password">
+                        <input type="password" class="form-control" name="reg_pwd" id="reg_pwd" placeholder="Password" value="<?php if(isset($_SESSION['reg_pwd'])){echo $_SESSION['reg_pwd'];unset($_SESSION['reg_pwd']);}?>">
                         <div class="error_msg" id="pwd_empty"><p>Please fill in your password.</p></div>
                         <div class="error_msg" id="pwd_maxlength"><p>Password is too long. Maximum 20 characters.</p></div>
                         <div class="error_msg" id="pwd_secure"><p>Password should be at least 8 characters.</p></div>
@@ -86,7 +86,7 @@ include 'php/sign_up_query.php';
                                 <img src="../Asset/login_psw_icon.svg" alt="@" width="20">
                             </div>
                         </div>
-                        <input type="password" class="form-control" name="reg_cpwd" id="reg_cpwd" placeholder="Confirm Password">
+                        <input type="password" class="form-control" name="reg_cpwd" id="reg_cpwd" placeholder="Confirm Password" value="<?php if(isset($_SESSION['reg_cpwd'])){echo $_SESSION['reg_cpwd'];unset($_SESSION['reg_cpwd']);}?>">
                         <div class="error_msg" id="cpwd_empty"><p>Please fill in your password.</p></div>
                         <div class="error_msg" id="cpwd_maxlength"><p>Password is too long. Maximum 20 characters.</p></div>
                         <div class="error_msg" id="cpwd_secure"><p>Password should be at least 8 characters.</p></div>

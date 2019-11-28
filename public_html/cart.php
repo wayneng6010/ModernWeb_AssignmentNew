@@ -311,7 +311,7 @@ include 'php/cart_query.php';
                         echo "<tr>
                                 <td>" . $counter . "</td>
                                 <td>" . $Sem_Session . "</td>
-                                <td><input type='number' id='seminar_quantity' class='form-control w-25 seminar_quantity' step='1' min='1' max='5' value='" . $row['Sem_Quantity'] . "'></td>
+                                <td><input type='number' id='seminar_quantity' class='form-control w-25 seminar_quantity " . $row['Sem_Session'] . "' step='1' min='1' max='5' value='" . $row['Sem_Quantity'] . "'></td>
                                 <td>
                                     <button type='button' class='sem_del_btn' value='" . $row['Sem_ID'] . "'><img src='../Asset/del_icon.svg' width='20'></button>
                                 </td>

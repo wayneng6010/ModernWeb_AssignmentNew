@@ -691,7 +691,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 if (data) {
-                    alert("Register successful");
+                    alert("Saved successful");
                     $(".msg_box.success").fadeIn();
                     setInterval(function () {
                         $(".msg_box.success").fadeOut();
@@ -1310,10 +1310,10 @@ $(document).ready(function () {
         }
     });
 
-    var oldValue_1 = $('.seminar_quantity').eq(0).val();
-    $('.seminar_quantity').eq(0).bind('input', function () {
+    var oldValue_1 = $('.seminar_quantity.ses1').eq(0).val();
+    $('.seminar_quantity.ses1').eq(0).bind('input', function () {
         var session = "ses1";
-        var seminar_quantity = $(".seminar_quantity").eq(0).val();
+        var seminar_quantity = $(".seminar_quantity.ses1").eq(0).val();
         var isIncrease;
         if (seminar_quantity > oldValue_1) {
             isIncrease = true;
@@ -1351,10 +1351,10 @@ $(document).ready(function () {
         });
     });
 
-    var oldValue_2 = $('.seminar_quantity').eq(1).val();
-    $('.seminar_quantity').eq(1).bind('input', function () {
+    var oldValue_2 = $('.seminar_quantity.ses2').eq(0).val();
+    $('.seminar_quantity.ses2').eq(0).bind('input', function () {
         var session = "ses2";
-        var seminar_quantity = $(".seminar_quantity").eq(1).val();
+        var seminar_quantity = $(".seminar_quantity.ses2").eq(0).val();
         var isIncrease;
         if (seminar_quantity > oldValue_2) {
             isIncrease = true;
@@ -1393,10 +1393,10 @@ $(document).ready(function () {
         });
     });
 
-    var oldValue_3 = $('.seminar_quantity').eq(2).val();
-    $('.seminar_quantity').eq(2).bind('input', function () {
+    var oldValue_3 = $('.seminar_quantity.ses3').eq(0).val();
+    $('.seminar_quantity.ses3').eq(0).bind('input', function () {
         var session = "ses3";
-        var seminar_quantity = $(".seminar_quantity").eq(2).val();
+        var seminar_quantity = $(".seminar_quantity.ses3").eq(0).val();
         var isIncrease;
         if (seminar_quantity > oldValue_3) {
             isIncrease = true;
