@@ -341,7 +341,7 @@ include 'php/cart_query.php';
                 </li>
             </ul>
             <form method="post" action="<?php echo filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_URL) ?>">
-                <button type="submit" href="checkout.php" class="btn btn-success px-5" name="checkout_btn" id="checkout_btn">Check Out</button>
+                <button type="submit" href="checkout.php" class="btn btn-success px-5" name="checkout_btn" id="checkout_btn" <?php echo (!$counter_ttl)? 'disabled':'enabled';?>>Check Out</button>
             </form>
             
         </nav>

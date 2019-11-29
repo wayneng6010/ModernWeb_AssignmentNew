@@ -249,3 +249,16 @@
 [28-11-2019 14:17:57] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
 [28-11-2019 14:17:57] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment/PAYID-LXP4R2A5SL41180S6854592K/execute
 [28-11-2019 14:17:59] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[29-11-2019 02:43:54] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[29-11-2019 02:43:56] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[29-11-2019 02:43:56] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[29-11-2019 02:43:58] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[29-11-2019 07:21:17] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[29-11-2019 07:21:19] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[29-11-2019 07:21:19] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[29-11-2019 07:21:21] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[29-11-2019 07:21:40] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[29-11-2019 07:21:40] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[29-11-2019 07:21:40] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[29-11-2019 07:21:41] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[29-11-2019 07:21:42] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Amount cannot be zero"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"c5362bf2e9d94"}

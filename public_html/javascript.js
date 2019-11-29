@@ -261,9 +261,6 @@ $(document).ready(function () {
                 // store section_members array into associative array with index section_name
                 orchestra_members[section_name] = section_members;
 
-
-//                $("#orchestra_section_member").val(JSON.stringify(orchestra_members));
-
                 $("#orchestra_member_list tbody tr").remove();
 
                 var counter = 1;
@@ -295,13 +292,6 @@ $(document).ready(function () {
                 $("#orchestra_section_members").val("");
 
                 $("#orchestra_section_add").html("Add Section");
-
-//                if ($("#orchestra_section_add").html() === "Update") {
-//                    document.body.innerHTML += '<div class="msg_box success"><img src="../Asset/correct_icon.svg" width="25" alt="@"><p>Updated successfully</p></div>';
-//                    $("#orchestra_section_add").html("Add Section");
-//                    //document.getElementById("reg_submit").click();
-//                }
-//            alert(JSON.stringify(orchestra_members));
 
             }
         }
@@ -668,18 +658,10 @@ $(document).ready(function () {
     });
 
     function orchestra_register_submit() {
-//        for (var i in orchestra_members)
-//        {
-//            $.each(orchestra_members[i], function (index, value) {
-//                orchestra_members_JSON += value + "<br>";
-//            });
-//        }
         var orchestra_members_json = JSON.stringify(orchestra_members);
-//        alert(orchestra_members_json);
         $.ajax({
             url: 'php/competition_register_orchestra_query.php',
             type: 'post',
-//            contentType: "application/json",
             data: {
                 section_arr: orchestra_members_json,
                 orchestra_category: $("#orchestra_category").val(),
@@ -703,8 +685,6 @@ $(document).ready(function () {
                         $(".msg_box.failed").fadeOut();
                     }, 2000);
                 }
-//                window.location.replace("cart.php");
-//                document.body.innerHTML += data;
             },
             error: function (exception) {
                 alert('Exception:' + exception);
